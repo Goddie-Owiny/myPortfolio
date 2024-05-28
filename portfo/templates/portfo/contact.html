@@ -1,11 +1,41 @@
-{% extends 'portfo/base.html' %}
-{% block content %}
-{% load static %}
+{% extends 'portfo/base.html' %} {% block content %} {% load static %}
 
+<div class="container p-3">
+  <!-- contact.html -->
+  <h3 class="text-end m-5 mb-2">Reach Out to Me</h3>
+  <hr />
+  <div class="row">
+    <div class="col-md-6">
+      <form method="post" action="" class="form mb-5">
+        {% csrf_token %}
 
-<div class="container">
-    <h3 class="testing"> this is to test the contact page if at all its reading the static file</h3>
+        <label for="name" class="form-label">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="form-control"
+        /><br /><br />
 
+        <label for="email" class="form-label">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-control"
+        /><br /><br />
+
+        <label for="message" class="form-label">Message:</label>
+        <textarea id="message" name="message" class="form-control"></textarea
+        ><br /><br />
+
+        <input type="submit" value="Send" />
+      </form>
+    </div>
+    <div class="col-md-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2263.8303942823527!2d32.53907860057202!3d0.15312637567019605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d91e165aa1679%3A0x36b0ec17548a50a5!2sGraphics%20Homes!5e1!3m2!1sen!2sug!4v1716874464318!5m2!1sen!2sug" width="630" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

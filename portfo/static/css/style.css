@@ -115,7 +115,8 @@ ul .nav-item .nav-link:hover {
 
 div .card:hover {
   transform: scale(1.2px, 1.2px);
-  box-shadow: 5px -2px 36px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 11px 34px 0 rgba(0,0,0,.2);
+  transition: scale(0, 0, 0.2, 1);
   transition: all 0.5s;
 }
 
@@ -146,7 +147,7 @@ ul li{
 
 .footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin: auto;
   background: rgb(14, 0, 44);
 }

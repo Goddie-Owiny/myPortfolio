@@ -1,0 +1,49 @@
+{% extends 'portfo/base.html' %}
+{% load static %}
+
+<style>
+    .babies{
+        display: grid;
+        margin: auto;
+        flex-direction: row;
+        width: fit-content;
+        padding: 1rem;
+        /* border: 3px solid rgb(14, 56, 141); */
+        border-radius: 15px;
+        background-color: rgb(158, 155, 155);
+        box-shadow: 0 11px 34px 0 rgba(0, 0, 0, 0.2);
+      }
+      
+      .babies h2{color: white;
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+</style>
+{% block content %}
+<div class="container">
+    <div class="row">
+    <div class="babies col-md-2 d-md-block mt-5">
+        <h2 class="text-center baby"> 120</h2> <hr>
+        <h5 class= "text-center">
+          <strong>All Babies</strong>
+        </h5>
+    </div>
+
+    <div class="babies col-md-2 d-md-block mt-5">
+        <h2 class="text-center baby"> 66</h2> <hr>
+        <h5 class= "text-center">
+          <strong>All Sitters</strong>
+        </h5>
+    </div>
+
+    <div class="babies col-md-2 d-md-block mt-5">
+        <h2 class="text-center baby">UGX. 900000</h2> <hr>
+        <h5 class= "text-center">
+          <strong>All Payments</strong>
+        </h5>
+    </div>
+    </div>
+</div>
+{% endblock %}

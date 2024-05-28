@@ -16,6 +16,9 @@ def about(request):
 def project(request):
     return render(request, 'portfo/project.html')
 
+def dash(request):
+    return render(request, 'portfo/dashboard.html')
+
 def blog(request):
     blog_post = Blog.objects.all()
     blog_content = {

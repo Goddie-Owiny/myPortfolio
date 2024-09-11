@@ -19,8 +19,20 @@ a:hover {
 }
 
 .navbar-expand-lg {
+  top: 1cm;
   background-color: #205273;
-  border-radius: 10px 0px 10px 0px;
+  border-radius: 50px;
+  width: 50vw;
+  display: block;
+  position: sticky;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .navbar-expand-lg {
+    width: 100vw;
+    border-radius: 0;
+  }
 }
 
 .navbar-brand {
@@ -43,6 +55,25 @@ ul .nav-item .nav-link:hover {
   color: #b56223;
   border-top: 3px solid #b56223;
   transition: all 80ms;
+}
+
+.myName {
+  color: white;
+}
+
+.myName:hover{
+  color: #b56223;
+  transition: all 80ms;
+}
+
+.dropdown-menu .dropdown-item:hover{
+  background-color: #205273;
+  color: #b56223;
+}
+
+.logo img:hover {
+  transform: rotate(360deg);
+  transition: transform 5s; /* Ensure 'transform' is animated */
 }
 
 .profile {

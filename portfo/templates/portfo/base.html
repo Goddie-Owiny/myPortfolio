@@ -22,7 +22,7 @@
   <body>
     <nav class="container navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'about' %}">Goddie</a>
+        <a class="navbar-brand myName" href="{% url 'about' %}">Godfrey</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -66,22 +66,12 @@
                 <li><a class="dropdown-item" href="#">Hire Me</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item" href="#">View Resume</a>
+                  <a class="dropdown-item" href="{% static 'images/docs/resume.pdf' %}" target="_blank">View Resume</a>
                 </li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-info" type="submit">
-              Search
-            </button>
-          </form>
+          <img class="img-fluid logo" src="{% static 'images/Logo.png' %}" alt="logo" width="50" height="50">
         </div>
       </div>
     </nav>

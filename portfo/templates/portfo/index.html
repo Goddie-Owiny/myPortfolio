@@ -1,14 +1,24 @@
-{% extends 'portfo/base.html' %} {% block content %} {% load static %}
+{% extends 'portfo/base.html' %}
+{% block content %}
+{% load static %}
 
-<!-- content of this page goes in here -->
+<!-- Responsive Content Section -->
 
-<div class="container vh-100" >
+<div class="container vh-100">
+    {% comment %} <button onclick="changeTheme('dark')">Dark Theme</button>
+    <button onclick="changeTheme('light')">Light Theme</button>
+    <button onclick="changeTheme('blue')">Blue Theme</button> {% endcomment %}
+
     <h3 class="text-end m-5 mb-2">Home</h3> <hr>
-    <div class="row">
-        <div class="col-lg-4 profile p-sm-2" data-aos="fade-right">
-            <img src="{% static 'images/profile_2.jpg' %}" class="img-fluid profile-img" alt="" />
+
+    <div class="row align-items-center">
+        <!-- Profile Image (responsive behavior) -->
+        <div class="col-12 col-md-6 col-lg-4 p-2" data-aos="fade-right">
+            <img src="{% static 'images/profile_2.jpg' %}" class="img-fluid profile-img" alt="Profile Image" />
         </div>
-        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+
+        <!-- Content Section -->
+        <div class="col-12 col-md-6 col-lg-8 pt-4 pt-lg-0" data-aos="fade-left">
             <h3>UI/UX Designer &amp; Software Developer.</h3>
             <h4>
                 <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Goddie.", "I am a Competent Software Developer.", "I like Backend development using Python.", "And I use Django for Frontend Development." ]'>
@@ -20,12 +30,14 @@
             </div>
         </div>
     </div>
-    <div class="social-links">
-        <a href="" class="icons"><i class="bi bi-twitter"></i></a>
-        <a href="" class="icons"><i class="bi bi-whatsapp"></i></a>
-        <a href="" class="icons"><i class="bi bi-instagram"></i></a>
-        <a href="" class="icons"><i class="bi bi-linkedin"></i></i></a>
-        <a href="" class="icons"><i class="bi bi-github"></i></a>
+
+    <!-- Social Links Section (stacked on small screens) -->
+    <div class="social-links mt-4 d-flex justify-content-center flex-wrap">
+        <a href="" class="icons m-2"><i class="bi bi-twitter"></i></a>
+        <a href="" class="icons m-2"><i class="bi bi-whatsapp"></i></a>
+        <a href="" class="icons m-2"><i class="bi bi-instagram"></i></a>
+        <a href="" class="icons m-2"><i class="bi bi-linkedin"></i></a>
+        <a href="" class="icons m-2"><i class="bi bi-github"></i></a>
     </div>
 
 </div>

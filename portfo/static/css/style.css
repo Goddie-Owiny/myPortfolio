@@ -1,7 +1,63 @@
 body {
-  background-color: #e0dcdc;
-} 
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
 
+.theme-toggle {
+  --bg-color: #455271;
+  --main-color: #fefefe;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+}
+
+.input {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+}
+
+.icon {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+}
+
+.icon-moon {
+  fill: var(--main-color);
+}
+
+.icon-sun {
+  stroke: var(--main-color);
+  display: none;
+}
+
+.input:checked ~ .icon-sun {
+  display: block;
+}
+
+.input:checked ~ .icon-moon {
+  display: none;
+}
+
+.theme:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+
+/* Navigation styles */
 a {
   color: #205273;
   text-decoration: none;
@@ -153,7 +209,7 @@ ul .nav-item .nav-link:hover {
 }
 
 .cube-container:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 
 .cube {
@@ -175,15 +231,15 @@ ul .nav-item .nav-link:hover {
     )
     1;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  color: white;
-  font-size: 18px;
-  text-align: center;
-  line-height: 200px;
-  background: #306ca4cc;
-  border: 2px solid;
-  border-image: var(--french);
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.185);
+  border: 1px solid #205273;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;  
 }
 
 .front {

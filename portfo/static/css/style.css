@@ -319,3 +319,10 @@ ul li{
   background: rgb(14, 0, 44);
 }
 
+@media (max-width: 576px) {
+  .footer p {
+    font-size: 0.875rem; /* Smaller text for mobile */
+    padding: 0.5rem; /* Adjust padding for mobile */
+    margin-top: 3px;
+  }
+}
